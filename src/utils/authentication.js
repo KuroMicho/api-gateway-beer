@@ -1,5 +1,5 @@
 import { ApolloError } from "apollo-server";
-import serverConfig from "../server";
+import serverConfig from "../server.js";
 import fetch from "node-fetch";
 
 const authentication = async ({ req }) => {

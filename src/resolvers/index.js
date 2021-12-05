@@ -1,6 +1,6 @@
-import { authResolver } from "./authResolver";
-import { productsResolver } from "./productsResolver";
-import { ordersResolver } from "./ordersResolver";
+import { authResolver } from "./authResolver.js";
+import { productsResolver } from "./productsResolver.js";
+import { ordersResolver } from "./ordersResolver.js";
 import lodash from "lodash";
 
 const resolvers = lodash.merge(authResolver, productsResolver, ordersResolver);

@@ -1,5 +1,5 @@
 import { RESTDataSource } from "apollo-datasource-rest";
-import serverConfig from "../server";
+import serverConfig from "../server.js";
 
 export class AuthAPI extends RESTDataSource {
 	constructor() {
