@@ -6,12 +6,7 @@ export class AuthAPI extends RESTDataSource {
 		super();
 		this.baseURL = serverConfig.AUTH_API_URL;
 	}
-	/**
-	 * @name userDetailsById
-	 * @description: Get user details by user id
-	 * @param userId
-	 * @returns Promise<Resolved|Rejected>
-	 */
+
 	async userDetailsById(userId) {
 		return await this.get(`/user/${userId}/`);
 	}
@@ -27,8 +22,8 @@ export class AuthAPI extends RESTDataSource {
 	}
 
 	async refreshToken(token) {
-		const tokenCleaned = new Object(JSON.parse(JSON.stringify(token)));
-		return await this.post("/refresh/", tokenCleaned);
+		const refresh = new Object(token);
+		return await this.post("/refresh/", refresh);
 	}
 
 	async updateUser(userId, user) {
