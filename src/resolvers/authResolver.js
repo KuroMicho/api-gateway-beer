@@ -1,7 +1,6 @@
 export const authResolver = {
 	Query: {
 		userDetailsById: async (_, { userId }, { dataSources, userIdToken }) => {
-			console.log(userId, userIdToken);
 			if (userId == userIdToken) return await dataSources.AuthAPI.userDetailsById(userId);
 			else return null;
 		},
